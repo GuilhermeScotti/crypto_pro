@@ -26,7 +26,7 @@ const SideNav = () => {
 
       const blockchainEntries = Object.entries(data.Data)
         .filter(([key, value]) => value.PlatformType === "blockchain")
-        .slice(0, 3); //to make it faster.
+        .slice(0, 10); //to make it faster.
 
       const filteredData = Object.fromEntries(blockchainEntries);
 

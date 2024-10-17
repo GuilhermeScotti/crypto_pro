@@ -1,12 +1,12 @@
 import { useEffect, useState } from "react";
-import "./App.css";
-import CoinInfo from "./components/CoinInfo";
-import SideNav from "./components/SideNav";
+import "../App.css";
+import CoinInfo from "./CoinInfo";
+import SideNav from "./SideNav";
 
 const API_KEY = import.meta.env.VITE_APP_API_KEY;
 const API_URL = `https://min-api.cryptocompare.com/data/all/coinlist?api_key=${API_KEY}`;
 
-function App() {
+function Home() {
   const [list, setList] = useState(null);
   const [filteredResults, setFilteredResults] = useState([]);
   const [searchInput, setSearchInput] = useState("");
@@ -65,7 +65,6 @@ function App() {
               Object.entries(filteredResults).map(([coin]) =>
                 filteredResults[coin].PlatformType === "blockchain" ? (
                   <CoinInfo
-                    key={filteredResults[coin].Symbol}
                     image={filteredResults[coin].ImageUrl}
                     name={filteredResults[coin].FullName}
                     symbol={filteredResults[coin].Symbol}
@@ -79,4 +78,4 @@ function App() {
   );
 }
 
-export default App;
+export default Home;

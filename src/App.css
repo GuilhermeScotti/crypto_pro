@@ -39,3 +39,15 @@ li.main-list{
   height: 100%;
   background-color: #4f4f4f;
 }
+
+nav {
+  position: fixed;
+  top: 0;
+  right: 0;
+}
+
+.home-link {
+  border: 1px dotted white;
+  background: #1d1f1d;
+  width: 75px;
+}
